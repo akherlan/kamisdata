@@ -41,10 +41,10 @@ Anda dapat melakukan analisis data atau mempelajari skrip analisis data yang tel
 Jika Anda bekerja secara lokal di komputer dan sudah pernah melakukan *forking* repositori `kamisdata` sebelumnya, data baru yang ditambahkan tidak akan ada pada repositori di komputer maupun di akun GitHub Anda. Untuk menambahkan data yang baru Anda bisa melakukan *fetch* ke repositori Proyek R Indonesia dengan cara berikut:
 
 1. Tambah daftar *remote* bernama "upstream" dengan cara `git remote add upstream https://github.com/indo-r/kamisdata.git`
-2. Lakukan *fetching* dengan `git fetch upstream`. Tindakan ini akan merekam setiap perubahan yang ada pada "upstream" untuk diterapkan pada "origin" (lokal di komputer)
+2. Lakukan **_fetching_** dengan `git fetch upstream`. Tindakan ini akan merekam setiap perubahan yang ada pada "upstream" untuk diterapkan pada "origin" (lokal di komputer)
 3. Pastikan Anda berada pada *branch* "master" kembali dengan `git checkout upstream`
-4. Terapkan perubahan yang pernah Anda lakukan saat berada di *branch* "master" sehingga setiap "commit" yang belum pernah ada di "upstream/master" ikut disertakan: `git rebase upstream/master`
-5. Sekarang, Anda bisa melakukan analisis pada data tambahan yang sudah diperbarui
+4. Terapkan perubahan yang pernah Anda lakukan saat berada di *branch* "master" sehingga setiap **_commit_** yang belum pernah ada di "upstream/master" ikut disertakan: `git rebase upstream/master`
+5. Sekarang, Anda bisa melakukan analisis pada data tambahan yang sudah diperbarui, namun sebelum itu alangkah baiknya jika Anda juga melakukan pemutakhiran repositori GitHub hasil **_forking_** dengan `git push -f origin master`
 
 ## Kontribusi
 Anda memiliki dataset yang menarik? Silakan kontak [Muhammad Aswan Syahputra](https://t.me/aswansyahputra) jika Anda ingin menyumbangkan data tersebut untuk program Kamis Data selanjutnya!
