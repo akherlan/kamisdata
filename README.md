@@ -30,12 +30,21 @@ Program pekanan Kamis Data dari [**Komunitas R Indonesia**.](https://r-indonesia
 4. Skrip untuk mendapatkan data tersedia dalam direktori 'data-raw'. Anda dapat menggunakan skrip tersebut atau langsung menggunakan data berekstensi `rda` dalam direktori 'data'. **Jangan mengubah nama berkas dalam folder data-raw!**
 5. Harap untuk mempergunakan *ouput document* berupa GitHub Document. Pada YAML *header* R Markdown silakan untuk menuliskan **`output: github_document`**. Namun jika R Markdown tersebut tidak dapat di *render* menjadi dokumen markdown, harap untuk menambahkan opsi **`keep_md: true`** pada YAML *header*
 6. Jangan lupa untuk melakukan **_knitting_** pada berkas R Markdown hasil pekerjaan Anda tersebut!
-7. Pada hari rabu pekan berikutnya, silakan mengajukan **_Pull request_** atas hasil kerja Anda. Selamat mencoba!
+7. Pada hari Rabu pekan berikutnya, silakan mengajukan **_pull request_** atas hasil kerja Anda. Selamat mencoba!
 
 **Catatan:** Jika Anda sebelumnya telah melakukan *forking*, silakan ikuti panduan pada pranala [ini](https://digitaldrummerj.me/git-sync-fork-to-master/) untuk melakukan sinkronisasi repositori
 
 ## Menggunakan Binder
 Anda dapat melakukan analisis data atau mempelajari skrip analisis data yang telah dibuat langsung dari peramban dengan menggunakan *binder*. Anda tidak perlu mengunduh/klon repositori ini atau memasang RStudio terlebih dahulu untuk menjalankan *binder*, cukup klik >> [![Binder](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/indo-r/kamisdata/master?urlpath=rstudio)!
+
+## Memperbarui Data
+Jika Anda bekerja secara lokal di komputer dan sudah pernah melakukan *forking* repositori `kamisdata` sebelumnya, data baru yang ditambahkan tidak akan ada pada repositori di komputer maupun di akun GitHub Anda. Untuk menambahkan data yang baru Anda bisa melakukan *fetch* ke repositori Proyek R Indonesia dengan cara berikut:
+
+1. Tambah daftar *remote* bernama "upstream" dengan cara `git remote add upstream https://github.com/indo-r/kamisdata.git`
+2. Lakukan *fetching* dengan `git fetch upstream`. Tindakan ini akan merekam setiap perubahan yang ada pada "upstream" untuk diterapkan pada "origin" (lokal di komputer)
+3. Pastikan Anda berada pada *branch* "master" kembali dengan `git checkout upstream`
+4. Terapkan perubahan yang pernah Anda lakukan saat berada di *branch* "master" sehingga setiap "commit" yang belum pernah ada di "upstream/master" ikut disertakan: `git rebase upstream/master`
+5. Sekarang, Anda bisa melakukan analisis pada data tambahan yang sudah diperbarui
 
 ## Kontribusi
 Anda memiliki dataset yang menarik? Silakan kontak [Muhammad Aswan Syahputra](https://t.me/aswansyahputra) jika Anda ingin menyumbangkan data tersebut untuk program Kamis Data selanjutnya!
@@ -54,4 +63,4 @@ Anda memiliki dataset yang menarik? Silakan kontak [Muhammad Aswan Syahputra](ht
 
 + **Atribusi** — Anda harus mencantumkan nama yang sesuai, mencantumkan tautan terhadap lisensi, dan menyatakan bahwa telah ada perubahan yang dilakukan. Anda dapat melakukan hal ini dengan cara yang sesuai, namun tidak mengisyaratkan bahwa pemberi lisensi mendukung Anda atau penggunaan Anda.
 + **BerbagiSerupa** — Apabila Anda menggubah, mengubah, atau membuat turunan dari materi ini, Anda harus menyebarluaskan kontribusi Anda di bawah lisensi yang sama dengan materi asli. 
-    
+  
